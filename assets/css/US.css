@@ -1,0 +1,53 @@
+body {
+    background: url(../img/bg4.jpg) center center / 100% 90%;
+    background-repeat: no-repeat;
+}
+
+.all-member {
+    margin: 8% 12% 5% 12%;
+}
+
+.member-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E6E6FA;
+    margin-top: 45px;
+    border-radius: 10px;
+    border: 6px #E6E6FA dashed;
+}
+
+.pic-1 {
+    height: 350px;
+    width: 350px;
+    margin: 20px 100px;
+    border-radius: 12px;
+    transform: scale(1, 1);
+    transition: all 1s ease-out;
+}
+
+.social {
+    float: left;
+}
+
+.social img {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    opacity: 0.3;
+}
+
+.between-3 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pic-1:hover {
+    transform: scale(1.2, 1.2);
+}
+.social img:hover{
+    transform: rotate(45deg);
+    opacity: 1;
+    
+}

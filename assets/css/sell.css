@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+/*輪播圖*/
+.banner_container {
+  position: relative;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 1200px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.img_box {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul.img_box {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  transform: translateX(-1200px);
+}
+
+.img_box li {
+  float: left;
+  list-style: none;
+}
+
+.img_box li img {
+  width: 1200px;
+}
+
+.sel_box {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sel_box li {
+  list-style: none;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: pink;
+  margin-right: 3px;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.left_btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 3px;
+  cursor: pointer;
+}
+
+.right_btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 30px;
+  line-height: 30px;
+  padding-right: 3px;
+  cursor: pointer;
+}
+
+.sel_box .cur {
+  background-color: red !important;
+  transform: scale(1.3);
+}
+
+/*輪播圖*/
+
+
+
+/*調整輪播圖的圖片大小*/
+.p1 {
+  height: 520px;
+  width: 650px;
+}
+
+/*調整輪播圖的圖片大小*/
+
+/*側邊欄位*/
+.sidenav {
+  width: 136px;
+  position: fixed;
+  z-index: 1;
+  top: 20%;
+  left: 9px;
+  background: rgb(255, 196, 196);
+  overflow-x: hidden;
+  padding: 8px 0;
+  border-radius: 5px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+/*側邊欄位*/
+
+/*文字特效*/
+h1 {
+  font-size: 5em;
+  font: bold 7.5vw/1.6 'Signika', sans-serif;
+  user-select: none;
+  text-align: center;
+}
+
+.hotw {
+  display: inline-block;
+  animation: float .2s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: none;
+  }
+
+  33% {
+    transform: translateY(-1px) rotate(-2deg);
+  }
+
+  66% {
+    transform: translateY(1px) rotate(2deg);
+  }
+}
+
+body:hover .hotw {
+  animation: bounce .6s;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+  }
+}
+
+
+.hotw:nth-child(4n-1) {
+  color: hsl(37, 100%, 81%);
+  text-shadow: 1px 1px hsl(39, 100%, 71%), 2px 2px hsl(56, 96%, 65%), 3px 3px hsl(56, 100%, 73%), 4px 4px hsl(37, 100%, 50%);
+}
+
+.hotw:nth-child(4n-2) {
+  color: hsl(27, 100%, 72%);
+  text-shadow: 1px 1px hsl(51, 94%, 57%), 2px 2px hsl(49, 100%, 56%), 3px 3px hsl(51, 100%, 66%), 4px 4px hsl(41, 100%, 50%);
+}
+
+.hotw:nth-child(4n-3) {
+  color: hsl(0, 82%, 70%);
+  text-shadow: 1px 1px hsl(2, 100%, 70%), 2px 2px hsl(17, 96%, 60%), 3px 3px hsl(14, 100%, 60%), 4px 4px hsl(0, 100%, 62%);
+}
+
+h1 .hotw:nth-child(2) {
+  animation-delay: .05s;
+}
+
+h1 .hotw:nth-child(3) {
+  animation-delay: .1s;
+}
+
+h1 .hotw:nth-child(4) {
+  animation-delay: .15s;
+}
+
+h1 .hotw:nth-child(5) {
+  animation-delay: .2s;
+}
+
+h1 .hotw:nth-child(6) {
+  animation-delay: .25s;
+}
+
+h1 .hotw:nth-child(7) {
+  animation-delay: .3s;
+}
+
+h1 .hotw:nth-child(8) {
+  animation-delay: .35s;
+}
+
+h1 .hotw:nth-child(9) {
+  animation-delay: .4s;
+}
+
+h1 span:nth-child(10) {
+  animation-delay: .45s;
+}
+
+h1 .hotw:nth-child(11) {
+  animation-delay: .5s;
+}
+
+h1 .hotw:nth-child(12) {
+  animation-delay: .55s;
+}
+
+h1 .hotw:nth-child(13) {
+  animation-delay: .6s;
+}
+
+h1 .hotw:nth-child(14) {
+  animation-delay: .65s;
+}
+
+/*文字特效*/
+
+.f {
+  width: 100%;
+  height: 450px;
+  /*HOT整列*/
+}
+
+.bboxx {
+  text-align: center;
+  margin-right: 300px;
+  margin-left: 150px;
+  /*蛋糕的距離*/
+  display: flex;
+  margin-right: 150px;
+  justify-content: center;
+}
+
+.c1 {
+  /*background-color: blue;*/
+  width: 300px;
+  height: 300px;
+  margin-top: 80px;
+  float: left;
+  margin-right: 150px;
+}
+
+.c2 {
+  /*background-color: rgb(38, 197, 136);*/
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 150px;
+}
+
+.c3 {
+  /*background-color: rgb(236, 160, 97);*/
+  width: 300px;
+  height: 300px;
+  float: right;
+  margin-top: 100px;
+}
+
+.medal1 {
+  width: 50px;
+  height: 69px;
+  position: absolute;
+  /*獎牌第一*/
+}
+
+.medal2 {
+  width: 50px;
+  height: 69px;
+  position: absolute;
+  /*獎牌第二*/
+
+}
+
+.medal3 {
+  width: 50px;
+  height: 69px;
+  position: absolute;
+  /*獎牌第三*/
+}
+
+.cake {
+  height: 240px;
+  width: 240px;
+  /*蛋糕圖片大小*/
+}
+
+/*商品start*/
+.ALLTHING {
+  margin-top: 2%;
+  margin-left: 4.5%;
+  display: inline-block;
+  width: 83%;
+  max-width: 1500px;
+  height: auto;
+  padding: 10px 50px 30px 50px;
+}
+
+.ALLTHING2 {
+  margin-top: 2%;
+  margin-left: -4%;
+  padding: 10px 50px 30px 50px;
+  max-width: 1500px;
+  width: 98.5%;
+  height: auto;
+  display: inline-block;
+}
+
+.cardsss {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  left: 30px;
+  /*background-color: #26292f;*/
+}
+
+.onecard {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
+}
+
+.onecard:hover {
+  background-color: rgb(247, 247, 247);
+  cursor: pointer;
+  transition: 0.5s;
+
+  /*transform: scale(1,1);*/
+
+}
+
+.onecard h2 {
+  font-size: 15px;
+  width: auto;
+  display: inline-block;
+  text-align: left;
+  letter-spacing: 3px;
+  line-height: 30px;
+  padding: 10px;
+  margin: 0px;
+}
+
+.onecard p {
+  /* padding: 10px; */
+  padding-left: 10px;
+  margin: 0px;
+  color: #4980a3;
+}
+
+
+/*立即選購跳出視窗的圖片大小*/
+.modalsimg {
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+/*商品end*/
+
+/*彈出購物車*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  /*background: #1662fa;*/
+  /* text-align: center;*/
+  /*box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);*/
+  z-index: 4;
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    height: 80px;
+  }
+}
+
+#cd-cart-trigger {
+  position: absolute;
+  top: 23px;
+
+  height: 100%;
+  /*padding-right: 100px;*/
+}
+
+#cd-cart-trigger {
+  right: 20%;
+  /* z-index: -1;*/
+
+}
+
+#cd-cart {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 260px;
+  /* header height */
+  padding-top: 50px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /*box-shadow: 0 0 20px rgba(241, 185, 0, 0.753);*/
+  z-index: 3;
+}
+
+@media only screen and (min-width: 1200px) {
+
+  #main-nav,
+  #cd-cart {
+    width: 30%;
+    /* header height has changed */
+    padding-top: 80px;
+  }
+}
+
+#cd-cart {
+  right: -100%;
+  background: rgb(255, 255, 255);
+  -webkit-transition: right 0.3s;
+  -moz-transition: right 0.3s;
+  transition: right 0.3s;
+  z-index: -1;
+  width: 400px;
+  /*白色大小喔*/
+  height: 85%;
+}
+
+#cd-cart.speed-in {
+  right: 0;
+}
+
+#cd-cart>* {
+  padding: 0 1em;
+}
+
+#cd-cart h2 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+#cd-cart .cd-cart-items {
+  padding: 0;
+}
+
+#cd-cart .cd-cart-items li {
+  position: relative;
+  padding: 1em;
+  border-top: 1px solid #e0e6ef;
+}
+
+#cd-cart .cd-cart-items li:last-child {
+  border-bottom: 1px solid #e0e6ef;
+}
+
+#cd-cart .cd-qty,
+#cd-cart .cd-price {
+  color: #a5aebc;
+}
+
+#cd-cart .cd-price {
+  margin-top: .4em;
+}
+
+#cd-cart .checkout-btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #7dcf85;
+  color: #FFF;
+  text-align: center;
+}
+
+.no-touch #cd-cart .checkout-btn:hover {
+  background: #a2dda8;
+}
+
+#cd-cart .cd-go-to-cart a {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 1200px) {
+  #cd-cart>* {
+    padding: 0 2em;
+  }
+
+  #cd-cart .cd-cart-items li {
+    padding: 1em 2em;
+  }
+
+  #cd-cart .cd-item-remove {
+    right: 2em;
+  }
+}

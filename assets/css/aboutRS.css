@@ -1,0 +1,36 @@
+section {
+    margin: 10%;
+}
+
+.about-1 {
+    margin: 0 12% 5% 12%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.word-1 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.img-1 {
+    background-color: #ffcec3e0;
+    border-radius: 30px;
+}
+
+.img-2 {
+    border-radius: 7px;
+    margin: 60px 0;
+}
+
+.word-2 p {
+    text-align: center;
+}
+
+.word-2 img {
+    border-radius: 7px;
+    margin: 60px 0;
+    text-align: center;
+}

@@ -1,0 +1,92 @@
+section{
+    margin:8% 20%;
+}
+.pay-1,.who{
+    background-color: 	#fff0f5e7;
+    padding: 2%;
+    border-radius: 2em;
+    text-align: center;
+    margin-top: 5%;
+}
+.pay-1 h1{
+    padding-bottom: 2%;
+    text-align: center;
+    font-family: 標楷體;
+    font-size: 30px
+
+}
+.pay-1 img{
+    max-width: 150px;
+    padding: 20px;
+}
+.pay-1 th,td{
+    width: 400px;
+
+}
+.buy-txt{
+    text-align:left;
+}
+
+.pay-1 th{
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+
+}
+.pay-1 td ,.total{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.order{
+    border-bottom: 1px black solid;
+}
+
+.total{
+    text-align: right;
+}
+
+
+.buyer-form input{
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 10px 0;
+    margin: 40px 0;
+    font-size: 20px;
+    letter-spacing: 0.5em;
+    display: flex;
+    width: 300px;
+    background-color: #FFF0F5;
+  
+}
+.who form{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+.how{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+    font-size: 20px;
+}
+.where select{
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+.how textarea{
+    width: 318px;
+    height: 146px;
+    font-size: 18px;
+}
+
+.btn-3{
+    border: none; 
+    padding: 15px 20px;
+    font-size: 17px;
+    background-color: #FFB7DD;
+    color: white;
+    border-radius: .2cm;
+    margin-top: 1%;
+    float: right;
+}
