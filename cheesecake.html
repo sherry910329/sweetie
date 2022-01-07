@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/sell.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/shopping-cart.css">
+    <!--product立即選購的部分程式碼(可不可按)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!--product立即選購的部分程式碼-->
+    <script src="assets/js/modernizr.js"></script> <!-- Modernizr -->
+    <!--立即選購boostrap藏-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--立即選購boostrap-->
+    <!--人頭跳出-->
+    <script src="assets/js/ml11.js"></script>
+    <!--人頭跳出-->
+</head>
+
+<body>
+    <header>
+        <div class="between">
+
+            <div class="menu">
+                <a href="aboutRS.html" class="menu-1">關於RS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="sell.html" class="menu-1">系列商品</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="QA.html" class="menu-1">訂購流程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="index.html"><img src="assets/img/logo1.png" class="logo menu-1"></a>
+                <a href="membership.html" class="menu-1">會員專區</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="US.html" class="menu-1">網站人員</a>
+                <a href="#">
+                    <img src="assets/img/user.png" class="buy" id="displaysign" onclick="start()"></a>
+                <div class="signform" id="signform" style="display: none">
+                    <div class="signclose">
+                        <img src="assets/img/x.png" width="30px" height="30px" onclick="signclose()">
+                    </div>
+                    <form action="">
+                        <div class="user">
+                            <input id="user" class="signinput" type="text" placeholder="帳號" name="user">
+                        </div>
+                        <div class="pwd">
+                            <input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd">
+                        </div>
+                        <div class="postdiv">
+                            <input type="submit" value="登入" class="submit">
+                            <a href="member.html">
+                                <h4>註冊</h4>
+                            </a>
+                        </div>
+                    </form>
+                    <br>
+                </div>
+                <!--購物車跳出框-->
+                <div id="cd-cart-trigger">
+                    <a href="#">
+                        <img style="margin-left: 80%;margin-top: 4px;" src="assets/img/shopping-cart.png"
+                            class="buy"></a>
+                </div>
+                <div id="cd-cart">
+                    <ul class="cd-cart-items">
+                        <li>
+                            <img style="height: 70px;width: 70px ;margin-top: 20px; margin-left: -45px;"
+                                src="assets/img/cheesecake1.jpg">
+                            <span class="cd-qty">1x</span> Best of RS's Sampler
+                            <div class="cd-price">NT$580</div>
+                            <a href="#0" class="cd-item-remove cd-img-replace"><img style="width:10px; height:10px;"
+                                    src="assets/img/x.png"></a>
+                        </li>
+                        <li>
+                            <img style="height: 70px;width: 70px ;margin-top: 20px; margin-left: -45px;"
+                                src="assets/img/cheesecake2.jpg">
+                            <span class="cd-qty">2x</span> Best of RS's Exra Large
+                            <div class="cd-price">NT$580</div>
+                            <a href="#0" class="cd-item-remove cd-img-replace"><img style="width:10px; height:10px;"
+                                    src="assets/img/x.png"></a>
+                        </li>
+                        <li>
+                            <img style="height: 70px;width: 70px ;margin-top: 20px; margin-left: -45px;"
+                                src="assets/img/cheesecake3.jpg">
+                            <span class="cd-qty">1x</span> Favorites Little cheesecake
+                            <div class="cd-price">NT$580</div>
+                            <a href="#0" class="cd-item-remove cd-img-replace"><img style="width:10px; height:10px;"
+                                    src="assets/img/x.png"></a>
+                        </li>
+                    </ul> <!-- cd-cart-items -->
+                    <div class="cd-cart-total">
+                        <p>Total <span>NT$1,740</span></p>
+                    </div> <!-- cd-cart-total -->
+                    <a href="pay.html" class="checkout-btn">結帳</a>
+                    <p class="cd-go-to-cart"><a href="sell.html">繼續購物</a></p>
+                </div> <!-- cd-cart -->
+                <!--購物車跳出框-->
+            </div>
+        </div>
+    </header>
+    <div class="sidenav">
+        <a href="sell.html">All</a>
+        <a href="cheesecake.html">Cheese</a>
+        <a href="seasonal.html">Seasonal</a>
+        <a href="chocolate.html">Chocolate</a>
+    </div>
+    <!--輪播圖-->
+    <section>
+        <div class="banner_container">
+            <ul class="img_box">
+                <li><img class="p1" src="assets/img/foo1.jpg" alt=""></li>
+                <li><img class="p1" src="assets/img/foo1.jpg" alt=""></li>
+                <li><img class="p1" src="assets/img/foo2.jpg" alt=""></li>
+                <li><img class="p1" src="assets/img/foo3.jpg" alt=""></li>
+                <li><img class="p1" src="assets/img/foo4.jpg " alt=""></li>
+                <li><img class="p1" src="assets/img/foo5.jpg " alt=""></li>
+            </ul>
+            <ul class="sel_box">
+                <li data-index="0"></li>
+                <li data-index="1"></li>
+                <li data-index="2"></li>
+                <li data-index="3"></li>
+            </ul>
+            <div class="left_btn"><img src="assets\img\arrowleft.png"></div>
+            <div class="right_btn"><img src="assets\img\arrowright.png"></div>
+        </div>
+        <script src="assets/js/animation.js"></script>
+    </section>
+    <!--輪播圖-->
+    <hr>
+    <h1 style="text-align: center;">Cheese</h1>
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col">
+                <div class="onecard">
+                    <a href="produe.html"><img src="assets/img/cheesecake1.jpg" style="width:100%"></a>
+                    <h2>Best of Royal Sweetie’s Sampler</h2>
+                    <p style="text-align: end;"><small>NT$</small>580</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal1">
+                        立即選購
+                    </button>
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <image class="modalsimg" src="assets/img/cheesecake1.jpg"></image>
+                                    <p style="font-size: 20px;">Best of Royal Sweetie’s Sampler</p>
+                                    <br><br>
+                                    <p style="color: black;">售價&nbsp;<big style="color: red;">NT$580</big></p>
+                                    <br>
+                                    <p style="color: black;"> 數量&nbsp;&nbsp;<input id="number1" type="number" value="0"
+                                            min="0" max="54">
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">加入購物車</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="onecard">
+                    <a href="produe2.html"><img src="assets/img/cheesecake2.jpg" style="width:100%"></a>
+                    <h2>Best of Royal Sweetie’s Extra Large</h2>
+                    <p style="text-align: end;"><small>NT$</small>580</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2">
+                        立即選購
+                    </button>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <image class="modalsimg" src="assets/img/cheesecake2.jpg"></image>
+                                    <p style="font-size: 20px;">Best of Royal Sweetie’s Extra Large</p>
+                                    <br><br>
+                                    <p style="color: black;">售價&nbsp;<big style="color: red;">NT$580</big></p>
+                                    <br>
+                                    <p style="color: black;"> 數量&nbsp;&nbsp;<input id="number2" type="number" value="0"
+                                            min="0" max="54">
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">加入購物車</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="onecard">
+                    <a href="produe3.html"><img src="assets/img/cheesecake3.jpg" style="width:100%"></a>
+                    <h2>Favorites Little cheesecake</h2>
+                    <p style="text-align: end;"><small>NT$</small>580</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal3">
+                        立即選購
+                    </button>
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <image class="modalsimg" src="assets/img/cheesecake3.jpg"></image>
+                                    <p style="font-size: 20px;">Favorites Little cheesecake</p>
+                                    <br><br>
+                                    <p style="color: black;">售價&nbsp;<big style="color: red;">NT$580</big></p>
+                                    <br>
+                                    <p style="color: black;"> 數量&nbsp;&nbsp;<input id="number3" type="number" value="0"
+                                            min="0" max="54">
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">加入購物車</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="onecard">
+                    <a href="produe4.html"><img src="assets/img/cheesecake5.jpg" style="width:100%"></a>
+                    <h2>Christmas Little cheesecake gift box</h2>
+                    <p style="text-align: end;"><small>NT$</small>580</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal4">
+                        立即選購
+                    </button>
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <image class="modalsimg" src="assets/img/cheesecake5.jpg"></image>
+                                    <p style="font-size: 20px;">Christmas Little cheesecake gift box</p>
+                                    <br><br>
+                                    <p style="color: black;">售價&nbsp;<big style="color: red;">NT$580</big></p>
+                                    <br>
+                                    <p style="color: black;"> 數量&nbsp;&nbsp;<input id="number4" type="number" value="0"
+                                            min="0" max="54">
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">加入購物車</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container justify-content-start">
+        <div class="row justify-content-start">
+            <div class="col-3">
+                <div class="onecard">
+                    <a href="produe5.html"><img src="assets/img/cheesecake4.jpg" style="width:100%"></a>
+                    <h2>Original New York Plain Little Fellas</h2>
+                    <p style="text-align: end;"><small>NT$</small>580</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal5">
+                        立即選購
+                    </button>
+                    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <image class="modalsimg" src="assets/img/cheesecake4.jpg"></image>
+                                    <p style="font-size: 20px;">Original New York Plain Little Fellas</p>
+                                    <br><br>
+                                    <p style="color: black;">售價&nbsp;<big style="color: red;">NT$580</big></p>
+                                    <br>
+                                    <p style="color: black;"> 數量&nbsp;&nbsp;<input id="number5" type="number" value="0"
+                                            min="0" max="54">
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">加入購物車</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="onecard">
+                    <a href="produe6.html"><img src="assets/img/cheesecake6.jpg" style="width:100%"></a>
+                    <h2>No Sugar New York Plain Little Fellas</h2>
+                    <p style="text-align: end;"><small>NT$</small>580</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal6">
+                        立即選購
+                    </button>
+                    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <image class="modalsimg" src="assets/img/cheesecake6.jpg"></image>
+                                    <p style="font-size: 20px;">No Sugar New York Plain Little Fellas</p>
+                                    <br><br>
+                                    <p style="color: black;">售價&nbsp;<big style="color: red;">NT$580</big></p>
+                                    <br>
+                                    <p style="color: black;"> 數量&nbsp;&nbsp;<input id="number6" type="number" value="0"
+                                            min="0" max="54">
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">加入購物車</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script> <!-- Gem jQuery -->
+    <footer>
+        <p>@2021&nbsp;YiZhen&冠錚&筑熏&仟儀<br>多媒體程式設計-期末專案</p>
+    </footer>
+</body>
+
+</html>

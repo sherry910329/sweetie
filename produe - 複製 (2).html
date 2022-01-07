@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="http://www.softwhy.com/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(assets/css/common.css);
+        @import url(assets/css/produce.css);
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="between">
+             
+             <div class="menu">
+                 <a href="#" class="menu-1">關於時飴</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href="#" class="menu-1">系列商品</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href="#" class="menu-1">訂購流程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href="index.html"><img src="assets/img/logo1.png" class="logo menu-1"></a>
+                 <a href="member.html" class="menu-1">會員專區</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href="#" class="menu-1">網站人員</a>
+                 <a href="#">
+                     <img src="assets/img/user.png" class="buy" id="displaysign" onclick="start()"></a>
+                     <div class="signform" id="signform" style="display: none">
+                         <div class="signclose">
+                             <img src="assets/img/x.png" width="30px" height="30px" onclick="signclose()">
+                            </div>
+                            <form action="">
+                                <div class="user">
+                                    <input id="user" class="signinput" type="text" placeholder="帳號" name="user" >
+                                </div>
+                                <div class="pwd">
+                                    <input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd">
+                                </div> 
+                                <div class="postdiv">
+                                <input type="submit" value="登入" class="submit">
+                                <a href="member.html"><h4>註冊</h4></a>
+                                </div>
+                            </form>
+                     
+                     </div>
+                     <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge">
+                     <a href="#">
+                     <img src="assets/img/shopping-cart.png" class="buy" ></a>
+                    </span></span>
+             </div>      
+        </div>
+        
+    </header>
+    <div class="between-1">
+    <div class="show">
+        <div class="item">
+            <a class="big-photo"><img src="assets/img/cheesecake1.jpg" tag="big"/></a>
+            <a class="des-small"><img src="assets/img/cheesecake1.jpg" /></a>
+            <a class="des-small"><img src="assets/img/cheesecake-2.jpg" /></a>
+            <a class="des-small"><img src="assets/img/cheesecake-3.jpg" /></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="word">
+        <h1>Best of Royal Sweetie’s Sampler</h1>
+        <hr>
+        <p>What all New York- style cheesecakes aspire to be. Creamy but not heavy, light without falling apart as you take a forkful, and of course, that rich flavor. Rated “Best Overall” by the Wall Street Journal. Approx. Net wt. 3 lbs.</p>
+        <hr>
+        <ul class="btn-numbox">
+            <li><span class="number">Quantity：</span></li>
+            <li>
+                <ul class="count">
+                    <li><span id="num-jian" class="num-jian">-</span></li>
+                    <li><input type="text" class="input-num" id="input-num" value="0" /></li>
+                    <li><span id="num-jia" class="num-jia">+</span></li>
+                </ul>
+            </li>
+            <li><span class="kucun">（庫存:54）</span></li>
+　　　  </ul>
+        <hr>
+        <div class="between-2">
+        <h2>NT$580</h2>
+        <button class="btn btn-background-slide">Add To Car</button></div>
+    </div>
+    </div>
+    <br><br>
+    <div class="between-3">
+    <div class="comment">
+        <h2>商品評價</h2>
+        <hr>
+        <form>
+            姓名：<input type="text"><br>
+            <div class="star">服務評價：
+            <ul class="list1" id="list1">
+            <li><img src="assets/img/star.png"></li>
+            <li><img src="assets/img/star.png"></li>
+            <li><img src="assets/img/star.png"></li>
+            <li><img src="assets/img/star.png"></li>
+            <li><img src="assets/img/star.png"></li>
+            </ul>
+            </div>
+            <div class="wordarea">
+                評論：<br>
+                <textarea rows="5" ></textarea><br>
+                <input type="submit" value="送出">
+                <input type="Reset" value="重新填寫">
+            </div>
+        </form>
+        <br>
+        <hr>
+        <from>
+            <br>
+        菜菜<br><br>
+        <div class="star">服務評價：
+            
+        <ul style="padding: 10px 0 20px 0;">
+        <li><img src="assets/img/star-1.png" style="width: 35px; height: auto; float: left;"></li>
+        <li><img src="assets/img/star-1.png" style="width: 35px; height: auto; float: left;"></li>
+        <li><img src="assets/img/star-1.png" style="width: 35px; height: auto; float: left;"></li>
+        <li><img src="assets/img/star-1.png" style="width: 35px; height: auto; float: left;"></li>
+        <li><img src="assets/img/star-1.png" style="width: 35px; height: auto; float: left;"></li>
+        </ul>
+        </div>
+        <div class="wordarea">
+            <p style="padding-top: 20px;">
+                Nice!
+            </p>
+        </div>
+        </from>
+        <br>
+        <hr>
+        <br>
+    </div>
+    <div class="moreproduce">
+        <h2>相似商品</h2>
+        <hr>
+        <br>
+        <table>
+            <tr>
+            <td>
+                <img src="assets/img/cheesecake2.jpg">
+                <a href="#">
+                <p>Best of Royal Sweetie’s Extra Large</p></a>
+                <button class="btn btn-background-slide">Add To Car</button>
+            </td>
+            <td>
+                <img src="assets/img/cheesecake3.jpg" >
+                <a href="#">
+                <p>Favorites Little cheesecake</p></a>
+                <button class="btn btn-background-slide">Add To Car</button>
+            </td>
+            <td>
+                <img src="assets/img/cheesecake4.jpg" >
+                <a href="#">
+                <p>Original New York Plain Little Fellas</p></a>
+                <button class="btn btn-background-slide">Add To Car</button>
+            </td>
+            </tr>
+        </table>
+    </div>
+</div>
+    <footer>
+        <p>@2021&nbsp;YiZhen&冠錚<br>多媒體程式設計-期末專案</p>
+    </footer> 
+    <script src="http://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
+<script src="assets/js/qty.js"></script>
+<script src="assets/js/ml11.js"></script>
+<script src="assets/js/star.js"></script>
+</body>
+
+
+
+</html>
+
+
+
+<script type="text/javascript">
+    $(function () {
+        var aLi = $('.list1 li');
+        var leng = aLi.length;
+        var arr = ['很差', '較差', '一般', '較好', '很好'];
+        var arr2 = ['assets/img/star.png','assets/img/star.png','assets/img/star.png',
+                      'assets/img/star.png','assets/img/star.png'];
+        var s1 = '';
+       
+        aLi.click(function () {
+          for (var j = 0; j < leng; j++) {
+            aLi.eq(j).find('img').attr("src", "assets/img/star.png");
+          };
+          var index = $(this).index();
+          if (index < 2) {
+            for (var j = 0; j <= index; j++) {
+              aLi.eq(j).find('img').attr("src", "assets/img/star-1.png");
+              s1 = arr[index];
+              arr2[j] = aLi.eq(j).find('img').attr('src');
+            }
+          } else {
+            for (var j = 0; j <= index; j++) {
+              aLi.eq(j).find('img').attr('src', 'assets/img/star-1.png');
+              s1 = arr[index];
+              arr2[j] = aLi.eq(j).find('img').attr('src');
+            }
+          };
+       
+          for (var k = index + 1; k < leng; k++) {
+            arr2[k] = 'assets/img/star.png';
+          };
+          $('.s1').text(s1);
+        });
+       
+        aLi.hover(function () {
+          for (var j = 0; j < leng; j++) {
+            aLi.eq(j).find('img').attr('src', 'assets/img/star.png');
+          };
+          var index = $(this).index();
+          if (index < 2) {
+            for (var j = 0; j <= index; j++) {
+              aLi.eq(j).find('img').attr('src', 'assets/img/star-1.png');
+              $('.s1').text(arr[index]);
+            }
+          } else {
+            for (var j = 0; j <= index; j++) {
+              aLi.eq(j).find('img').attr('src', 'assets/img/star-1.png');
+              $('.s1').text(arr[index]);
+            }
+          }
+        }, function () {
+          for (var index = 0; index < leng; index++) {
+            aLi.eq(index).find('img').attr('src', arr2[index]);
+          }
+          $('.s1').text(s1);
+        });
+     })
+    
+    </script>
+
+

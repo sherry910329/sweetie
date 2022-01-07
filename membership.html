@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(assets/css/membership.css);
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/shopping-cart.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+
+    <!--product立即選購的部分程式碼(可不可按)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!--product立即選購的部分程式碼-->
+
+
+
+    <script src="assets/js/modernizr.js"></script> <!-- Modernizr -->
+
+
+
+
+    <!--立即選購boostrap藏-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--立即選購boostrap-->
+
+
+    <!--人頭跳出-->
+    <script src="assets/js/ml11.js"></script>
+    <!--人頭跳出-->
+
+</head>
+
+<body>
+    <header>
+        <div class="between">
+
+            <div class="menu">
+                <a href="aboutRS.html" class="menu-1">關於RS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="sell.html" class="menu-1">系列商品</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="QA.html" class="menu-1">訂購流程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="index.html"><img src="assets/img/logo1.png" class="logo menu-1"></a>
+                <a href="membership.html" class="menu-1">會員專區</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="US.html" class="menu-1">網站人員</a>
+                <a href="#">
+                    <img src="assets/img/user.png" class="buy" id="displaysign" onclick="start()"></a>
+                <div class="signform" id="signform" style="display: none">
+                    <div class="signclose">
+                        <img src="assets/img/x.png" width="30px" height="30px" onclick="signclose()">
+                    </div>
+                    <form action="">
+                        <div class="user">
+                            <input id="user" class="signinput" type="text" placeholder="帳號" name="user">
+                        </div>
+                        <div class="pwd">
+                            <input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd">
+                        </div>
+                        <div class="postdiv">
+                            <input type="submit" value="登入" class="submit">
+                            <a href="member.html">
+                                <h4>註冊</h4>
+                            </a>
+                        </div>
+                    </form>
+                    <br>
+
+                </div>
+                <!--購物車跳出框-->
+                <div id="cd-cart-trigger">
+                    <a href="#">
+                        <img style="margin-left: 80%;margin-top: 4px;" src="assets/img/shopping-cart.png"
+                            class="buy"></a>
+                </div>
+
+                <div id="cd-cart">
+
+                    <ul class="cd-cart-items">
+                        <li>
+                            <img style="height: 70px;width: 70px ;margin-top: 20px; margin-left: -45px;"
+                                src="assets/img/cheesecake1.jpg">
+                            <span class="cd-qty">1x </span>Best of RS's Sampler
+                            <div class="cd-price">NT$580</div>
+                            <a href="#0" class="cd-item-remove cd-img-replace"><img style="width:10px; height:10px;"
+                                    src="assets/img/x.png"></a>
+                        </li>
+
+                        <li>
+
+                            <img style="height: 70px;width: 70px ;margin-top: 20px; margin-left: -45px;"
+                                src="assets/img/cheesecake2.jpg">
+                            <span class="cd-qty">2x</span> Best of RS's Exra Large
+                            <div class="cd-price">NT$580</div>
+                            <a href="#0" class="cd-item-remove cd-img-replace"><img style="width:10px; height:10px;"
+                                    src="assets/img/x.png"></a>
+                        </li>
+
+                        <li>
+                            <img style="height: 70px;width: 70px ;margin-top: 20px; margin-left: -45px;"
+                                src="assets/img/cheesecake3.jpg">
+                            <span class="cd-qty">1x</span> Favorites Little cheesecake
+                            <div class="cd-price">NT$580</div>
+                            <a href="#0" class="cd-item-remove cd-img-replace"><img style="width:10px; height:10px;"
+                                    src="assets/img/x.png"></a>
+                        </li>
+                    </ul> <!-- cd-cart-items -->
+
+                    <div class="cd-cart-total">
+                        <p>Total <span>NT$1,740</span></p>
+                    </div> <!-- cd-cart-total -->
+
+                    <a href="pay.html" class="checkout-btn">結帳</a>
+
+                    <p class="cd-go-to-cart"><a href="sell.html">繼續購物</a></p>
+                </div> <!-- cd-cart -->
+                <!--購物車跳出框-->
+            </div>
+        </div>
+    </header>
+    <div class="all">
+
+        <div class="go-1">
+            <ul>
+                <li>
+                    <a href="#tab1" class="current">個人資料</a>
+                </li>
+                <li>
+                    <a href="#tab2">購物車</a>
+                </li>
+                <li>
+                    <a href="#tab3">訂單紀錄</a>
+                </li>
+                <li style="color: white; font-size: 25px; font-family: 標楷體;">
+                    <a id="gotop">
+                        TOP
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="contents" style="margin-top: 7%;">
+            <div id="tab1" class="member-1">
+                <h2>個人資料</h2>
+                <form class="about">
+
+                    <div class="person-1">
+                        <input type="text" placeholder="Name" value="">
+                        <!--抓個人資料填入value內-->
+                        <input type="text" placeholder="Gender" value="">
+                        <input type="text" placeholder="Phone" value="">
+                        <input type="text" placeholder="Email" value="">
+                        <input type="text" placeholder="Address" value="">
+                    </div>
+
+                    <div class="password-1">
+                        <input type="text" placeholder="Account" value="" class="password-2">
+                        <input type="password" placeholder="PassWord" value="" class="password-3">
+                        <input type="submit" value="確認更改" class="btn-2">
+                    </div>
+                </form>
+            </div>
+
+            <div id="tab2" class="car-1">
+                <h2>購物車</h2>
+                <form>
+                    <table>
+                        <tr>
+                            <th>商品</th>
+                            <th>單價</th>
+                            <th>數量</th>
+                            <th>合計($)</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>Cheesecake</td>
+
+                            <td>45</td>
+                            <td>
+                                <ul class="btn-numbox">
+                                    <li class="count">
+                                        <span class="num-jian" onclick="minus(this)">-</span>
+                                        <input type="text" class="input-num" id="quantity" value="1" />
+                                        <span class="num-jia" onclick="plus(this)">+</span>
+                                    </li>
+                                    　　　
+                                </ul>
+                            </td>
+                            <td>45</td>
+                            <td class="del" onclick="deltr(this)">刪除</td>
+
+                        </tr>
+                        <tr>
+                            <td>Strawberry cake</td>
+
+                            <td>50</td>
+                            <td>
+                                <ul class="btn-numbox">
+                                    <li class="count">
+                                        <span class="num-jian" onclick="minus(this)">-</span>
+                                        <input type="text" class="input-num" value="2" />
+                                        <span class="num-jia" onclick="plus(this)">+</span>
+                                    </li>
+                                    　　　
+                                </ul>
+                            </td>
+                            <td>100</td>
+                            <td class="del" onclick="deltr(this)">刪除</td>
+
+                        </tr>
+
+                    </table>
+                    
+                        <input type="submit" value="Go 結帳" class="btn-2" id="time"
+                        onclick="if (confirm('跳轉至結帳介面 &#x2728; &#x2728;')) location.href= 'pay.html';return false;">
+                       
+                    
+
+                </form>
+
+            </div>
+            <div id="tab3" class="car-1">
+                <h2>訂單紀錄</h2>
+                <form>
+                    <table>
+                        <tr>
+                            <th>商品名稱</th>
+                            <th>單價</th>
+                            <th>數量</th>
+                            <th>合計($)</th>
+                            <th>商品備註</th>
+                            <th>訂單狀態</th>
+                        </tr>
+                        <tr>
+                            <td>Chocolate Cake</td>
+                            <td>40</td>
+                            <td>1</td>
+                            <td>40</td>
+                            <td>無</td>
+                            <td>已完成</td>
+
+                        </tr>
+                    </table>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+
+
+
+
+    <script src="assets/js/main.js"></script> <!-- Gem jQuery -->
+    <footer>
+        <p>@2021&nbsp;蔡翊甄 呂冠錚 黃仟儀 郭筑熏<br>多媒體程式設計-期末專案</p>
+    </footer>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/enter.js"></script>
+<script src="assets/js/membership.js"></script>
+
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(assets/css/common.css);
+        @import url(assets/css/pay.css);
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="assets/css/shopping-cart.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+
+
+
+
+    <!--product立即選購的部分程式碼(可不可按)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!--product立即選購的部分程式碼-->
+
+
+
+    <script src="assets/js/modernizr.js"></script> <!-- Modernizr -->
+
+
+
+
+    <!--立即選購boostrap藏-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--立即選購boostrap-->
+
+
+    <!--人頭跳出-->
+    <script src="assets/js/ml11.js"></script>
+    <!--人頭跳出-->
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="between">
+
+            <div class="menu">
+                <a href="aboutRS.html" class="menu-1">關於RS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="sell.html" class="menu-1">系列商品</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="QA.html" class="menu-1">訂購流程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="index.html"><img src="assets/img/logo1.png" class="logo menu-1"></a>
+                <a href="membership.html" class="menu-1">會員專區</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="US.html" class="menu-1">網站人員</a>
+                <a href="#">
+                    <img src="assets/img/user.png" class="buy" id="displaysign" onclick="start()"></a>
+                <div class="signform" id="signform" style="display: none">
+                    <div class="signclose">
+                        <img src="assets/img/x.png" width="30px" height="30px" onclick="signclose()">
+                    </div>
+                    <form action="">
+                        <div class="user">
+                            <input id="user" class="signinput" type="text" placeholder="帳號" name="user">
+                        </div>
+                        <div class="pwd">
+                            <input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd">
+                        </div>
+                        <div class="postdiv">
+                            <input type="submit" value="登入" class="submit">
+                            <a href="member.html">
+                                <h4>註冊</h4>
+                            </a>
+                        </div>
+                    </form>
+                    <br>
+
+                </div>
+                <!--購物車跳出框-->
+                <div id="cd-cart-trigger">
+                    <a href="#">
+                        <img style="margin-left: 80%;margin-top: 4px;" src="assets/img/shopping-cart.png"
+                            class="buy"></a>
+                </div>
+
+                <div id="cd-cart">
+
+                    <ul class="cd-cart-items">
+                        <li>
+                            <img style="height: 70px;width: 70px ;margin-top: 20px; margin-left: -45px;"
+                                src="assets/img/cheesecake1.jpg">
+                            <span class="cd-qty">1x </span>Best of RS's Sampler
+                            <div class="cd-price">NT$580</div>
+                            <a href="#0" class="cd-item-remove cd-img-replace"><img style="width:10px; height:10px;"
+                                    src="assets/img/x.png"></a>
+                        </li>
+
+                        <li>
+
+                            <img style="height: 70px;width: 70px ;margin-top: 20px; margin-left: -45px;"
+                                src="assets/img/cheesecake2.jpg">
+                            <span class="cd-qty">2x</span> Best of RS's Exra Large
+                            <div class="cd-price">NT$580</div>
+                            <a href="#0" class="cd-item-remove cd-img-replace"><img style="width:10px; height:10px;"
+                                    src="assets/img/x.png"></a>
+                        </li>
+
+                        <li>
+                            <img style="height: 70px;width: 70px ;margin-top: 20px; margin-left: -45px;"
+                                src="assets/img/cheesecake3.jpg">
+                            <span class="cd-qty">1x</span> Favorites Little cheesecake
+                            <div class="cd-price">NT$580</div>
+                            <a href="#0" class="cd-item-remove cd-img-replace"><img style="width:10px; height:10px;"
+                                    src="assets/img/x.png"></a>
+                        </li>
+                    </ul> <!-- cd-cart-items -->
+
+                    <div class="cd-cart-total">
+                        <p>Total <span>NT$1,740</span></p>
+                    </div> <!-- cd-cart-total -->
+
+                    <a href="pay.html" class="checkout-btn">結帳</a>
+
+                    <p class="cd-go-to-cart"><a href="sell.html">繼續購物</a></p>
+                </div> <!-- cd-cart -->
+                <!--購物車跳出框-->
+            </div>
+        </div>
+
+    </header>
+    <section>
+        <div class="pay-1">
+            <h1>訂單確認</h1>
+            <table class="order">
+                <tr>
+                    <th colspan="2">商品</th>
+                    <th>單價($)</th>
+                    <th>數量</th>
+                    <th>合計($)</th>
+                </tr>
+                <tr>
+                    <td class="buy-img"><img src="assets/img/cheesecake1.jpg" alt=""></td>
+                    <td class="buy-txt">Best of RS's Sampler</td>
+                    <td>580</td>
+                    <td>1</td>
+                    <td>580</td>
+
+                </tr>
+                <tr>
+                    <td class="buy-img"><img src="assets/img/cheesecake2.jpg" alt=""></td>
+                    <td class="buy-txt">Best of RS's Exra Large</td>
+                    <td>580</td>
+                    <td>1</td>
+                    <td>580</td>
+
+                </tr>
+                <tr>
+                    <td class="buy-img"><img src="assets/img/cheesecake3.jpg" alt=""></td>
+                    <td class="buy-txt">Favorites Little cheesecake</td>
+                    <td>580</td>
+                    <td>1</td>
+                    <td>580</td>
+
+                </tr>
+            </table>
+            <div class="total">
+                <p><span>TOTAL:</span>NT$1,740</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="who">
+            <h1>配送資料</h1>
+            <form action="">
+                <div class="buyer-form">
+                    <h3>收件人資料</h3>
+                    <input type="text" placeholder="請填寫本名" value="">
+                    <!--抓個人資料填入value內-->
+                    <input type="text" placeholder="電話" value="">
+                    <input type="text" placeholder="超商配送填寫超商地址" value="">
+                </div>
+
+                <div class="where">
+                    <h3>寄送方式</h3>
+                    <div class="how">
+                        <select name="" id="">
+                            <option value="">宅配</option>
+                            <option value="">全家貨到付款</option>
+                            <option value="">7-11貨到付款</option>
+                        </select>
+                        <textarea name="" id="" placeholder="備註"></textarea>
+                    </div>
+                    <input type="submit" value="BUY" class="btn-3" id="time"
+                        onclick="if (confirm('購買成功 &#x2728; &#x2728;')) location.href= 'index.html';return false;">
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+
+        <script src="assets/js/main.js"></script> <!-- Gem jQuery -->
+
+
+    </section>
+    <footer>
+        <p>@2021&nbsp;蔡翊甄 呂冠錚 黃仟儀 郭筑熏<br>多媒體程式設計-期末專案</p>
+    </footer>
+</body>
+
+</html>
